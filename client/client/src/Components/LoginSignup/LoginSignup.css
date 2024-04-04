@@ -1,0 +1,44 @@
+
+.img-icons{
+    width: 33%;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+.icons{
+    width: 30px;
+    margin-right: 15px;
+   
+}
+
+.form-group  {
+    width: 25%;
+    margin: auto;
+    box-shadow: 0 0 25px rgba(5, 5, 5, 0.953);
+     
+}
+
+.container{
+margin-bottom: 20px;
+}
+
+.titulo{
+    margin-bottom: 25px;
+    font-family: 'Times New Roman', Times, serif;
+  
+}
+
+.btn{
+    width: 90%;
+    margin-bottom: 25px;
+    
+}
+
+input{
+    border-radius: 5px;
+    margin-left: 25px;
+    width: 100%;
+}
+
+
+
+
