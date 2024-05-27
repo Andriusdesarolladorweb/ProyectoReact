@@ -1,0 +1,46 @@
+create database SistemaDeControlAhorrosyGasto 
+
+Use SistemaDeControlAhorrosyGasto
+
+create table Usuarios (
+Id int primary key identity(1,1),
+Usuario varchar(100),
+Contraseña varchar(100)
+)
+
+create procedure sp_validarUsuario 
+@Usuario varchar(50),
+@Contraseña varchar(50),
+@Patron varchar(50)
+as
+begin 
+select*from Usuarios where Usuario=@Usuario and CONVERT(varchar(50),DECRYPTBYPASSPHRASE(@Patron, Contraseña)) =@Contraseña
+end
+
+
+create table Entrada(
+Id int primary key identity (1,1),
+Descricion varchar(59),
+Monto money,
+Fecha date)
+
+Select * from Entrada
+
+Insert into Entrada(Descricion, Monto, Fecha)
+values 
+('Sueldo', '11361', '15/12/2023')
+
+select * from Entrada
+
+create table Gatos_Fijos(
+Descricion varchar(59),
+Monto money)
+
+
+Insert into Gatos_Fijos(Descricion, Monto)
+values 
+('Diezmo', '1200'),
+('Promesa', '1000'),
+('Mami','1500')
+
+select * from Gatos_Fijos
